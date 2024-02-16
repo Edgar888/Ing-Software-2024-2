@@ -1,0 +1,4 @@
+Este programa intenta emular un marcador de Tenis
+por medio de una logica de gana el que haga la mayor cantidad de puntos de forma impar por set
+la ejecucucion del programa es mediante la termianl con la instruccion $ python Script1.p 
+Donde el programa inica con ingresar el nombre de los jugadores si es igual, deja modificar el segundo jugador para que no juegue contra si mismo, igual el numero de sets si pones un numero par por error dejara que pongas un numero impar para empezar el juego, tu decides a quien darle en punto, el programa finaliza cuando encuetra un ganador.
