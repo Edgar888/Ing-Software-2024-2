@@ -1,4 +1,4 @@
-#!/home/ferfong/Git/Ing-Software-2024-2/venv/bin/python
+#!/home/edgar/FCiencias/6Semestre/IngenieriaDeSoftware/Practicas/Ing-Software-2024-2/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
