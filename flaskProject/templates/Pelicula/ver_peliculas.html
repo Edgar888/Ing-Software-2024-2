@@ -1,0 +1,101 @@
+<! ver peliculas >
+<!Edgar Montiel Ledesma 317317794 >
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peliculas</title>
+    <style>
+        /* Estilos para el contenedor principal */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Ajustar la dirección del eje principal a columna */
+        }
+
+        .container {
+            margin: 20px auto; /* Ajustar los márgenes */
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Estilos para los botones */
+        button {
+            margin: 5px; /* Agregar un pequeño margen entre los botones */
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para la tabla */
+        .table-container {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 600px; /* Ajustar el ancho máximo de la tabla */
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Peliculas</h1>
+        <div class="table-container">
+            <table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Genero</th>
+                    <th>Duracion</th>
+                    <th>Inventario</th>
+                </tr>
+                {% for pelicula in peliculas %}
+                <tr>
+                    <td>{{ pelicula.idPelicula }}</td>
+                    <td>{{ pelicula.nombre }}</td>
+                    <td>{{ pelicula.genero }}</td>
+                    <td>{{ pelicula.duracion }}</td>
+                    <td>{{ pelicula.inventario }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 20px;"> <!-- Contenedor para los botones -->
+            <button onclick="window.location.href='/pelicula/actualizar_pelicula'">Actualizar pelicula</button>
+            <button onclick="window.location.href='/pelicula/agregar_pelicula'">Agregar pelicula</button>
+            <button onclick="window.location.href='/pelicula/borrar_peliculas'">Borrar pelicula</button>
+            <button onclick="window.history.back()">Regresar</button>
+        </div>
+    </div>
+</body>
+</html>

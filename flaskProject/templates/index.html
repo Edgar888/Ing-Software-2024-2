@@ -1,10 +1,36 @@
+<! index de la practica para poder ingresar al menu >
+<! Edgar Montiel Ledesma 317317794 >
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Index</title>
+    <title>Menu</title>
+    <style>
+        .title {
+            text-align: center; /* Centra el texto horizontalmente */
+        }
+
+        .button-container {
+            margin: 0 auto;
+            width: 600px; /* Aumenté el ancho del contenedor para que los botones tengan más espacio */
+            text-align: center; /* Centra horizontalmente los elementos dentro del contenedor */
+        }
+
+        .button-container button {
+            display: inline-block; /* Hace que los botones se muestren en línea */
+            margin: 5px; /* Espacio entre los botones */
+        }
+    </style>
 </head>
 <body>
-    <a href="/mpb/html">Regresar</a>
+    <div class="title">
+        <h1>Menu</h1>
+    </div>
+    <div class="button-container">
+        <button onclick="window.location.href='/usuario'">Usuarios</button>
+        <button onclick="window.location.href='/pelicula'">Peliculas</button>
+        <button onclick="window.location.href='/rentar'">Rentar</button>
+    </div>
 </body>
 </html>

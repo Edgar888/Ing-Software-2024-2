@@ -1,0 +1,60 @@
+<! raiz rentas >
+<!Edgar Montiel Ledesma 317317794 > 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rentar</title>
+    <style>
+        /* Estilos para el contenedor principal */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Estilos para los botones */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Permite que los botones se envuelvan en múltiples líneas si es necesario */
+            margin-top: 20px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rentar</h1>
+        <div class="button-container">
+            <button onclick="window.location.href='/rentar/ver_rentas'">Ver todas las rentas</button>
+            <button onclick="window.location.href='/rentar/actualizar_renta'">Actualizar renta</button>
+            <button onclick="window.location.href='/rentar/agregar_renta'">Agregar renta</button>
+            <button onclick="window.location.href='/'">Regresar</button>
+        </div>
+    </div>
+</body>
+</html>
+

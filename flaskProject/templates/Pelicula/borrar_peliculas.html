@@ -1,0 +1,34 @@
+<! raiz peliculas >
+<!Edgar Montiel Ledesma 317317794 >
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrar Película</title>
+</head>
+<body>
+    <div style="margin: 0 auto; width: 200px;">
+        <h1>Borrar Película</h1>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+        <div style="margin-top: 20px; margin-bottom: 20px;">
+            <form method="post">
+                <label for="idPelicula">Ingrese el ID:</label>
+                <input type="text" name="idPelicula" id="idPelicula"/>
+                <br>
+                <div style="margin: 0 auto; width: 200px;">
+                    <button>Eliminar Película</button>
+                    <a href="/" style="margin-left: 10px;">Regresar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

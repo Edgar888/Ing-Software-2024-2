@@ -1,0 +1,78 @@
+<! actualizar usuarios >
+<!Edgar Montiel Ledesma 317317794 >
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Usuario</title>
+    <style>
+        /* Estilos para el contenedor principal */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Estilos para el formulario */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        select {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Actualizar Usuario</h1>
+        <div>
+            <form action="{{ url_for('usuario.actualizar_usuario') }}" method="post">
+                <label for="idUsuario">ID de Usuario:</label>
+                <input type="text" id="idUsuario" name="idUsuario"><br>
+                <label for="campoActualizar">Campo a Actualizar:</label>
+                <select id="campoActualizar" name="campoActualizar">
+                    <option value="nombre">Nombre</option>
+                    <option value="apPat">Apellido Paterno</option>
+                    <option value="apMat">Apellido Materno</option>
+                    <option value="password">Password</option>
+                    <option value="email">Email</option>
+                </select><br>
+                <label for="nuevoValor">Nuevo Valor:</label>
+                <input type="text" id="nuevoValor" name="nuevoValor"><br>
+                <button type="submit">Actualizar Usuario</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

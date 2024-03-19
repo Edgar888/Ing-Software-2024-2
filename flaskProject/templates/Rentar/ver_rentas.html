@@ -1,0 +1,88 @@
+<! ver rentas >
+<!Edgar Montiel Ledesma 317317794 >
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentas</title>
+    <style>
+        /* Estilos para el contenedor principal */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilos para la tabla */
+        .table-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 800px; /* Ancho máximo para la tabla */
+            width: 100%;
+            overflow-x: auto; /* Agregar desplazamiento horizontal si es necesario */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin: 0 auto; width: 200px;">
+        <h1>Rentas</h1>
+    </div>
+    <div class="table-container">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID Rentar</th>
+                    <th>ID Usuario</th>
+                    <th>ID Pelicula</th>
+                    <th>Fecha Renta</th>
+                    <th>Días De Renta</th>
+                    <th>Estatus</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for renta, usuario, pelicula in rentas %}
+                <tr>
+                    <td>{{ renta.idRentar }}</td>
+                    <td>{{ usuario.idUsuario }}</td>
+                    <td>{{ pelicula.idPelicula }}</td>
+                    <td>{{ renta.fecha_renta }}</td>
+                    <td>{{ renta.dias_de_renta }}</td>
+                    <td>{{ renta.estatus }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

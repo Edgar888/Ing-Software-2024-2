@@ -1,0 +1,60 @@
+<! Raiz de ver_usuarios de la practica para poder ingresar al menu >
+<! Edgar Montiel Ledesma 317317794 >
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios</title>
+    <style>
+        /* Estilos para el contenedor principal */
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilos para los botones */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los botones se envuelvan en múltiples líneas */
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 10px; /* Espacio entre la fila de botones y el botón de regresar */
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            flex-grow: 1; /* Hace que los botones crezcan para ocupar todo el espacio disponible */
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Usuarios</h1>
+        <div class="button-container">
+            <button onclick="window.location.href='/usuario/ver_usuarios'">Ver todos los usuarios</button>
+            <button onclick="window.location.href='/usuario/actualizar_usuario'">Actualizar usuario</button>
+            <button onclick="window.location.href='/usuario/agregar_usuario'">Agregar usuario</button>
+            <button onclick="window.location.href='/usuario/borrar_usuario'">Borrar usuario</button>
+        </div>
+        <button onclick="window.location.href='/'">Regresar</button>
+    </div>
+</body>
+</html>
+

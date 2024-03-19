@@ -1,0 +1,37 @@
+<! actualizar peliculas >
+<!Edgar Montiel Ledesma 317317794 >
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Película</title>
+</head>
+<body>
+    <div style="margin: 0 auto; width: 200px;">
+        <h1>Actualizar Película</h1>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+        <div style="margin-top: 20px; margin-bottom: 20px;">
+            <form action="{{ url_for('pelicula.actualizar_pelicula') }}" method="post">
+                <label for="idPelicula">ID:</label>
+                <input type="text" id="idPelicula" name="idPelicula" required><br>
+                <label for="campoActualizar">Campo a Actualizar:</label>
+                <select id="campoActualizar" name="campoActualizar" required>
+                    <option value="nombre">Nombre</option>
+                    <option value="genero">Género</option>
+                    <option value="duracion">Duración</option>
+                    <option value="inventario">Inventario</option>
+                </select><br>
+                <label for="nuevoValor">Nuevo Valor:</label>
+                <input type="text" id="nuevoValor" name="nuevoValor" required><br>
+                <div style="display: flex; justify-content: space-between;">
+                    <button type="submit">Actualizar Película</button>
+                    <button onclick="window.history.back()">Regresar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
