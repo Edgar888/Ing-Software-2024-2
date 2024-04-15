@@ -1,0 +1,36 @@
+/* CRURentas.css */
+
+.crud-rentas {
+  margin-top: 20px;
+}
+
+.crud-rentas h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.crud-rentas form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.crud-rentas input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.crud-rentas button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.crud-rentas button:hover {
+  background-color: #0056b3;
+}

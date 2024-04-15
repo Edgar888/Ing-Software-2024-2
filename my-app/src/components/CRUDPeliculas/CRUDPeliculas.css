@@ -1,0 +1,56 @@
+/* CRUDPeliculas.css */
+
+.crud-peliculas {
+  margin-bottom: 20px;
+}
+
+.crud-peliculas h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.crud-peliculas form {
+  margin-bottom: 20px;
+}
+
+.crud-peliculas form input {
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.crud-peliculas form button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.crud-peliculas form button:hover {
+  background-color: #0056b3;
+}
+
+.crud-peliculas ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.crud-peliculas li {
+  margin-bottom: 10px;
+}
+
+.crud-peliculas li button {
+  padding: 4px 8px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.crud-peliculas li button:hover {
+  background-color: #c82333;
+}
